@@ -1,0 +1,974 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Add locales to an existing file · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="update_existing_file.html" />
+    
+    
+    <link rel="prev" href="bootstrap_new_locale.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Products</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../products/appstores/">
+            
+                <a href="../../products/appstores/">
+            
+                    
+                    App stores
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../products/appstores/new_release_android.html">
+            
+                <a href="../../products/appstores/new_release_android.html">
+            
+                    
+                    New Android release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../products/appstores/new_release_ios.html">
+            
+                <a href="../../products/appstores/new_release_ios.html">
+            
+                    
+                    New iOS release
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../products/firefox_android/">
+            
+                <a href="../../products/firefox_android/">
+            
+                    
+                    Firefox for Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../products/firefox_android/adding_singlelocale.html">
+            
+                <a href="../../products/firefox_android/adding_singlelocale.html">
+            
+                    
+                    Single-locale builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../products/firefox_android/adding_multilocales.html">
+            
+                <a href="../../products/firefox_android/adding_multilocales.html">
+            
+                    
+                    Multi-locales build
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../products/firefox_desktop/">
+            
+                <a href="../../products/firefox_desktop/">
+            
+                    
+                    Firefox Desktop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../products/firefox_desktop/adding_nightly.html">
+            
+                <a href="../../products/firefox_desktop/adding_nightly.html">
+            
+                    
+                    Nightly builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../products/firefox_desktop/adding_release.html">
+            
+                <a href="../../products/firefox_desktop/adding_release.html">
+            
+                    
+                    Beta/Release builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../../products/firefox_desktop/removing_locales.html">
+            
+                <a href="../../products/firefox_desktop/removing_locales.html">
+            
+                    
+                    Removing locales
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Review
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../products/review/signoffs.html">
+            
+                <a href="../../products/review/signoffs.html">
+            
+                    
+                    Sign-offs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../products/review/review.html">
+            
+                <a href="../../products/review/review.html">
+            
+                    
+                    Review strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../products/firefox_iOS/">
+            
+                <a href="../../products/firefox_iOS/">
+            
+                    
+                    Firefox for iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../products/firefox_iOS/review_iOSstrings.html">
+            
+                <a href="../../products/firefox_iOS/review_iOSstrings.html">
+            
+                    
+                    Reviewing new strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../products/mozilla_org/">
+            
+                <a href="../../products/mozilla_org/">
+            
+                    
+                    Mozilla.org
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="../../products/mozilla_org/working_bedrock.html">
+            
+                <a href="../../products/mozilla_org/working_bedrock.html">
+            
+                    
+                    Working with Bedrock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="import_translations.html">
+            
+                <a href="import_translations.html">
+            
+                    
+                    Importing translations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="../../products/mozilla_org/updating_mozillaorg_production.html">
+            
+                <a href="../../products/mozilla_org/updating_mozillaorg_production.html">
+            
+                    
+                    Updating production
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" data-path="../../products/mozilla_org/enable_production.html">
+            
+                <a href="../../products/mozilla_org/enable_production.html">
+            
+                    
+                    New locales
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../../products/searchplugins/setup_searchplugins.html">
+            
+                <a href="../../products/searchplugins/setup_searchplugins.html">
+            
+                    
+                    Searchplugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tools</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../pontoon/">
+            
+                <a href="../pontoon/">
+            
+                    
+                    Pontoon
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../pontoon/adding_new_project.html">
+            
+                <a href="../pontoon/adding_new_project.html">
+            
+                    
+                    New project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../pontoon/adding_new_locale.html">
+            
+                <a href="../pontoon/adding_new_locale.html">
+            
+                    
+                    New locale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../pontoon/sending_notifications.html">
+            
+                <a href="../pontoon/sending_notifications.html">
+            
+                    
+                    Notifications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../pontoon/renaming_a_file.html">
+            
+                <a href="../pontoon/renaming_a_file.html">
+            
+                    
+                    Renaming a localization file
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../stores_l10n/">
+            
+                <a href="../stores_l10n/">
+            
+                    
+                    Stores webapp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../stores_l10n/overview.html">
+            
+                <a href="../stores_l10n/overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../stores_l10n/add_new_product.html">
+            
+                <a href="../stores_l10n/add_new_product.html">
+            
+                    
+                    New product
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Web dashboards
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="langchecker.html">
+            
+                <a href="langchecker.html">
+            
+                    
+                    Langchecker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="webdashboard.html">
+            
+                <a href="webdashboard.html">
+            
+                    
+                    Webdashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="bootstrap_new_locale.html">
+            
+                <a href="bootstrap_new_locale.html">
+            
+                    
+                    Bootstrap a new locale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3.4" data-path="add_locales.html">
+            
+                <a href="add_locales.html">
+            
+                    
+                    Add locales to an existing file
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="update_existing_file.html">
+            
+                <a href="update_existing_file.html">
+            
+                    
+                    Update an existing file
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="remove_obsolete_files.html">
+            
+                <a href="remove_obsolete_files.html">
+            
+                    
+                    Remove obsolete files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="add_new_file.html">
+            
+                <a href="add_new_file.html">
+            
+                    
+                    Add a new file to an existing project
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Misc</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../mercurial/">
+            
+                <a href="../mercurial/">
+            
+                    
+                    Mercurial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../mercurial/setting_mercurial_environment.html">
+            
+                <a href="../mercurial/setting_mercurial_environment.html">
+            
+                    
+                    Set up the environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../mercurial/creating_mercurial_patch.html">
+            
+                <a href="../mercurial/creating_mercurial_patch.html">
+            
+                    
+                    Create a patch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../mercurial/useful_mercurial_commands.html">
+            
+                <a href="../mercurial/useful_mercurial_commands.html">
+            
+                    
+                    Useful Mercurial commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../misc/">
+            
+                <a href="../../misc/">
+            
+                    
+                    Other docs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../misc/creating_new_repository.html">
+            
+                <a href="../../misc/creating_new_repository.html">
+            
+                    
+                    New l10n repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../misc/working_w_l10n_agency.html">
+            
+                <a href="../../misc/working_w_l10n_agency.html">
+            
+                    
+                    How to work with a Localization Agency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../misc/documentation_styleguide.html">
+            
+                <a href="../../misc/documentation_styleguide.html">
+            
+                    
+                    Documentation styleguide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../misc/stock_emails.html">
+            
+                <a href="../../misc/stock_emails.html">
+            
+                    
+                    Stock emails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../config/setup_l10ndrivers_vm.html">
+            
+                <a href="../../config/setup_l10ndrivers_vm.html">
+            
+                    
+                    L10n-drivers VM setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Add locales to an existing file</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="add-locales-to-an-existing-file">Add locales to an existing file</h1>
+<p>Example task: add <code>sv-SE</code> to the list of supported locales for <code>foundation/index.lang</code>.</p>
+<h2 id="updating-langchecker-sources">Updating Langchecker sources</h2>
+<p>First you need to search for the file that you want to update in <a href="https://github.com/mozilla-l10n/langchecker/blob/master/app/config/sources.inc.php" target="_blank">app/config/sources.inc.php</a>.</p>
+<p>Always remember to <strong>work on a fork</strong> of the main repository, and <strong>create a branch</strong> in your local clone. Assuming the langchecker installation is in <code>~/mozilla/git/langchecker</code>, and that the branch name you want to create is <code>TESTBRANCH</code>, the commands to use would be:</p>
+<pre><code class="lang-BASH">$ <span class="hljs-built_in">cd</span> ~/mozilla/git/langchecker
+$ git branch TESTBRANCH
+$ git checkout TESTBRANCH
+</code></pre>
+<p>At this point you&#x2019;re ready to update the configuration file.</p>
+<pre><code class="lang-PHP"><span class="hljs-string">&apos;foundation/index.lang&apos;</span> =&gt; [
+    <span class="hljs-string">&apos;flags&apos;</span> =&gt; [
+        <span class="hljs-string">&apos;opt-in&apos;</span> =&gt; [<span class="hljs-string">&apos;all&apos;</span>],
+    ],
+    <span class="hljs-string">&apos;supported_locales&apos;</span> =&gt; [
+        <span class="hljs-string">&apos;de&apos;</span>, <span class="hljs-string">&apos;es-ES&apos;</span>, <span class="hljs-string">&apos;fr&apos;</span>, <span class="hljs-string">&apos;kab&apos;</span>, <span class="hljs-string">&apos;pl&apos;</span>, <span class="hljs-string">&apos;pt-BR&apos;</span>, <span class="hljs-string">&apos;zh-TW&apos;</span>,
+    ],
+],
+</code></pre>
+<p>Adding <code>sv-SE</code> would result in:</p>
+<pre><code class="lang-PHP"><span class="hljs-string">&apos;foundation/index.lang&apos;</span> =&gt; [
+    <span class="hljs-string">&apos;flags&apos;</span> =&gt; [
+        <span class="hljs-string">&apos;opt-in&apos;</span> =&gt; [<span class="hljs-string">&apos;all&apos;</span>],
+    ],
+    <span class="hljs-string">&apos;supported_locales&apos;</span> =&gt; [
+        <span class="hljs-string">&apos;de&apos;</span>, <span class="hljs-string">&apos;es-ES&apos;</span>, <span class="hljs-string">&apos;fr&apos;</span>, <span class="hljs-string">&apos;kab&apos;</span>, <span class="hljs-string">&apos;pl&apos;</span>, <span class="hljs-string">&apos;pt-BR&apos;</span>, <span class="hljs-string">&apos;sv-SE&apos;</span>, <span class="hljs-string">&apos;zh-TW&apos;</span>,
+    ],
+],
+</code></pre>
+<p>Commit the changes and open a pull request on the <a href="https://github.com/mozilla-l10n/langchecker" target="_blank">main repository</a>.</p>
+<pre><code class="lang-BASH">$ <span class="hljs-built_in">cd</span> ~/mozilla/git/langchecker
+$ git add app/config/sources.inc.php
+$ git commit -m <span class="hljs-string">&quot;Add sv-SE to foundation/index.lang&quot;</span>
+$ git push origin TESTBRANCH
+</code></pre>
+<h2 id="adding-the-file-to-the-repository">Adding the file to the repository</h2>
+<p>At this point you need to run <code>lang_update</code> to actually add the file to the repository.</p>
+<pre><code class="lang-BASH">$ lang_update all 0 sv-SE
+</code></pre>
+<p>This line updates <strong>all</strong> files, for website 0 (mozilla.org), for <strong>sv-SE</strong>.</p>
+<p>Move in the l10n repository, make sure to add the file and commit.</p>
+<pre><code class="lang-BASH">$ trunkst
+On branch master
+Your branch is up-to-date with <span class="hljs-string">&apos;origin/master&apos;</span>.
+Untracked files:
+  (use <span class="hljs-string">&quot;git add &lt;file&gt;...&quot;</span> to include <span class="hljs-keyword">in</span> what will be committed)
+
+    sv-SE/foundation/index.lang
+
+nothing added to commit but untracked files present (use <span class="hljs-string">&quot;git add&quot;</span> to track)
+
+$ git add sv-SE
+$ git commit -m <span class="hljs-string">&quot;Add foundation/index.lang to sv-SE&quot;</span>
+$ git push
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="bootstrap_new_locale.html" class="navigation navigation-prev " aria-label="Previous page: Bootstrap a new locale">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="update_existing_file.html" class="navigation navigation-next " aria-label="Next page: Update an existing file">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Add locales to an existing file","level":"3.3.4","depth":2,"next":{"title":"Update an existing file","level":"3.3.5","depth":2,"path":"tools/webdashboards/update_existing_file.md","ref":"tools/webdashboards/update_existing_file.md","articles":[]},"previous":{"title":"Bootstrap a new locale","level":"3.3.3","depth":2,"path":"tools/webdashboards/bootstrap_new_locale.md","ref":"tools/webdashboards/bootstrap_new_locale.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","toc"],"pluginsConfig":{"search-pro":{},"toc":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tools/webdashboards/add_locales.md","mtime":"2018-03-08T16:40:09.786Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-08T16:41:31.949Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
